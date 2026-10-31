@@ -1,0 +1,8 @@
+/* Six-stage mechanism illustration; separate from the competition proposal. */
+.membrane73 .m74-sequence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px 28px;scroll-margin-top:34px}
+.membrane73 .m74-sequence svg{display:block;width:100%;height:auto;aspect-ratio:512/410}
+.membrane73 .m74-sequence figcaption{display:flex;align-items:baseline;gap:12px;margin-top:14px;font-size:14px;line-height:1.5;color:var(--ink)}
+.membrane73 .m74-sequence figcaption span{font-size:11px;letter-spacing:.05em;color:#84917e;font-variant-numeric:tabular-nums}
+.membrane73 .m74-source{font-size:11px;line-height:1.6;color:var(--muted);margin:28px 0 48px}
+@media(max-width:760px){.membrane73 .m74-sequence{gap:26px 18px}.membrane73 .m74-sequence figcaption{font-size:12px;gap:8px}}
+@media(max-width:520px){.membrane73 .m74-sequence{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 14px}.membrane73 .m74-sequence figcaption{font-size:12px;gap:7px;margin-top:9px}.membrane73 .m74-source{margin:24px 0 32px}}

@@ -1,0 +1,75 @@
+/* Under One Shell: material → research → proposal → related spatial studies. */
+.membrane73 figure{margin:0}
+.membrane73 img,.membrane73 svg{display:block;max-width:100%}
+.membrane73 .m70-material-stage{display:grid;grid-template-columns:58% 42%;align-items:center;background:#fff}
+.membrane73 .m70-material-stage>img{width:100%;height:490px;object-fit:contain}
+.membrane73 .m70-layer-key{display:grid;gap:42px;max-width:260px;padding-left:30px}
+.membrane73 .m70-layer-key>div{position:relative;padding-left:24px}
+.membrane73 .m70-layer-key h3{font-size:19px;font-weight:500;margin-bottom:4px}
+.membrane73 .m70-layer-key p{font-size:13px}
+.membrane73 .m70-swatch{position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%}
+.membrane73 .m70-concrete{background:#aaa9a0}.membrane73 .m70-foam{background:#cdb984}.membrane73 .m70-membrane{background:#a5b7b0}
+.membrane73 .m70-material>figcaption{font-size:11px;line-height:1.6;color:var(--muted);text-align:center;margin:10px 0 0}
+.membrane73 .m70-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:30px}
+.membrane73 .m70-process figure{position:relative}
+.membrane73 .m70-process figure+figure:before{content:'→';position:absolute;left:-25px;top:45%;font-size:18px;color:#a0a89c}
+.membrane73 .m70-step-art img{width:100%;height:170px;object-fit:contain;mix-blend-mode:multiply;filter:contrast(1.06)}
+.membrane73 .m70-process figcaption{text-align:center;margin-top:12px;line-height:1.5}
+.membrane73 .m70-process b{font-size:13px;font-weight:500;color:var(--ink)}
+.membrane73 .m70-experiments{display:grid;grid-template-columns:1fr 1.25fr;gap:24px}
+.membrane73 .m70-experiments img{width:100%;height:340px;object-fit:cover;border-radius:6px}
+.membrane73 .m70-experiments figcaption{font-size:12px;margin-top:12px}
+.membrane73 .m73-proposal{max-width:650px;margin:36px auto 24px}
+.membrane73 .m73-proposal svg{width:100%;height:auto;filter:contrast(1.13)}
+.membrane73 .m68-configs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.membrane73 .m68-configs img,.membrane73 .m68-configs svg{width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;mix-blend-mode:multiply;border-radius:0}
+.membrane73 .m68-configs figcaption{text-align:center;font-size:13px;margin-top:10px}
+.membrane73 .m73-recognition{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:22px;margin-top:36px}
+.membrane73 .m73-recognition>span{font-size:12px;color:var(--muted)}
+.membrane73 .m73-recognition p{font-size:14px;color:var(--ink)}
+.membrane73 .m73-recognition strong{font-weight:500}
+.membrane73 .m72-studies img{width:100%;height:auto;border-radius:6px}
+.membrane73 .m72-details{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.membrane73 #design-studies{scroll-margin-top:24px}
+@media(max-width:760px){
+ .membrane73 .m70-material-stage>img{height:400px}
+ .membrane73 .m70-layer-key{padding-left:10px;gap:30px}
+ .membrane73 .m70-layer-key h3{font-size:16px}
+ .membrane73 .m70-layer-key p{font-size:12px}
+ .membrane73 .m70-step-art img{height:130px}
+ .membrane73 .m70-experiments img{height:260px}
+}
+@media(max-width:520px){
+ .membrane73 .m70-material-stage{grid-template-columns:1fr}
+ .membrane73 .m70-material-stage>img{height:auto;max-height:420px}
+ .membrane73 .m70-layer-key{max-width:none;padding:16px 0 4px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+ .membrane73 .m70-layer-key>div{padding:18px 0 0}
+ .membrane73 .m70-swatch{top:0}
+ .membrane73 .m70-layer-key h3{font-size:13px;line-height:1.45}
+ .membrane73 .m70-layer-key p{font-size:11px;line-height:1.5}
+ .membrane73 .m70-material>figcaption{text-align:left;margin-top:22px;font-size:10px}
+ .membrane73 .m70-process{grid-template-columns:1fr;gap:20px;margin-top:30px}
+ .membrane73 .m70-process figure{display:grid;grid-template-columns:48% 1fr;gap:18px;align-items:center}
+ .membrane73 .m70-process figure+figure:before{display:none}
+ .membrane73 .m70-step-art img{height:110px}
+ .membrane73 .m70-process figcaption{text-align:left;margin:0}
+ .membrane73 .m70-experiments{grid-template-columns:1fr;gap:24px}
+ .membrane73 .m70-experiments img{height:auto;aspect-ratio:1.35;object-fit:cover}
+ .membrane73 .m73-proposal{margin:24px 0}
+ .membrane73 .m68-configs{grid-template-columns:1fr;gap:26px}
+ .membrane73 .m68-configs img,.membrane73 .m68-configs svg{max-height:230px}
+ .membrane73 .m68-configs figcaption{margin-top:5px}
+ .membrane73 .m73-recognition{display:block;margin-top:28px;padding-top:18px}
+ .membrane73 .m73-recognition p{margin-top:6px;font-size:13px}
+ .membrane73 .m72-details{grid-template-columns:1fr;gap:16px;margin-top:16px}
+ .membrane73 .m72-studies img{border-radius:5px}
+}
+
+.membrane73 .m73-workflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:28px}
+.membrane73 .m73-workflow svg{width:100%;height:auto;aspect-ratio:1;filter:contrast(1.08)}
+.membrane73 .m73-workflow figcaption{text-align:center;font-size:12px;color:var(--muted);margin-top:12px}
+@media(max-width:520px){
+ .membrane73 .m73-workflow{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+ .membrane73 .m73-workflow figure:last-child{grid-column:1/-1;width:55%;justify-self:center}
+ .membrane73 .m73-workflow figcaption{font-size:11px;margin-top:6px}
+}

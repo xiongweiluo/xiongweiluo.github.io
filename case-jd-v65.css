@@ -1,0 +1,8 @@
+/* JD module overview: unframed screens with one-line labels. */
+.jd-modules65 { scroll-margin-top:35px; }
+.jd-module-grid65 {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 28px;padding:0;background:none;border:0;border-radius:0;}
+.jd-module-grid65 figure {margin:0;min-width:0;}
+.jd-module-screen65 {overflow:hidden;border-radius:7px;border:1px solid #e0e5ec;background:#fff;box-shadow:0 7px 20px #17233d08;}
+.jd-module-screen65 img {display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;}
+.jd-editorial64 .jd-module-grid65 figcaption {display:block;margin:0;padding:12px 0 0;text-align:center;color:#6b766e;font-size:14px;font-weight:500;line-height:1.5;}
+@media(max-width:600px){.jd-module-grid65{grid-template-columns:1fr;gap:28px;}.jd-editorial64 .jd-module-grid65 figcaption{padding-top:10px;font-size:13px;}}

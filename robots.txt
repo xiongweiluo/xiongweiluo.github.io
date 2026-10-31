@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xiongweiluo.github.io/sitemap.xml
