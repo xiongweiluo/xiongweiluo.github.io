@@ -59,14 +59,14 @@ def pair(left, right, bold=False, gap=1):
 def section(label):
     global y
     y -= 12
-    c.setFont('CV-Bold', 8.2)
-    c.setFillColor(ACCENT)
-    c.drawString(LEFT, y - 8.2, label.upper())
-    start = LEFT + pdfmetrics.stringWidth(label.upper(), 'CV-Bold', 8.2) + 13
-    c.setStrokeColor(RULE)
-    c.setLineWidth(.6)
-    c.line(start, y - 5, RIGHT, y - 5)
-    y -= 18
+    c.setFont('CV-Bold', 10.5)
+    c.setFillColor(INK)
+    c.drawString(LEFT, y - 10.5, label.upper())
+    start = LEFT + pdfmetrics.stringWidth(label.upper(), 'CV-Bold', 10.5) + 13
+    c.setStrokeColor(colors.HexColor('#AEBDB3'))
+    c.setLineWidth(.8)
+    c.line(start, y - 6.5, RIGHT, y - 6.5)
+    y -= 20
 
 
 def bullet(value):
