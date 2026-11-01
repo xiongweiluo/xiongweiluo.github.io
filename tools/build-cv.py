@@ -10,9 +10,10 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 ROOT = Path(__file__).resolve().parents[1]
 FONT_DIR = Path('/System/Library/Fonts/Supplemental')
-for name, filename in [('CV', 'Arial.ttf'), ('CV-Bold', 'Arial Bold.ttf')]:
+for name, filename in [('CV', 'Arial.ttf'), ('CV-Bold', 'Arial Bold.ttf'),
+                       ('CV-Italic', 'Arial Italic.ttf'), ('CV-BoldItalic', 'Arial Bold Italic.ttf')]:
     pdfmetrics.registerFont(TTFont(name, str(FONT_DIR / filename)))
-pdfmetrics.registerFontFamily('CV', normal='CV', bold='CV-Bold')
+pdfmetrics.registerFontFamily('CV', normal='CV', bold='CV-Bold', italic='CV-Italic', boldItalic='CV-BoldItalic')
 
 W, H = A4
 LEFT, RIGHT = 38, W - 38
@@ -28,9 +29,9 @@ c.setSubject('AI Product and Application Development')
 y = H - 37
 
 
-def text(value, size=9.1, leading=12.1, color=INK, bold=False, gap=0, indent=0):
+def text(value, size=9.1, leading=12.1, color=INK, bold=False, gap=0, indent=0, italic=False):
     global y
-    style = ParagraphStyle('cv', fontName='CV-Bold' if bold else 'CV',
+    style = ParagraphStyle('cv', fontName='CV-Bold' if bold else ('CV-Italic' if italic else 'CV'),
                            fontSize=size, leading=leading, textColor=color)
     p = Paragraph(value, style)
     _, height = p.wrap(WIDTH - indent, H)
@@ -42,12 +43,15 @@ def pair(left, right, bold=False, gap=1):
     global y
     size = 9.1
     rw = pdfmetrics.stringWidth(right, 'CV', 8.5)
-    p = Paragraph(left, ParagraphStyle('pair', fontName='CV-Bold' if bold else 'CV',
+    if bold:
+        name, separator, detail = left.partition(' <font')
+        left = '<b>' + name + '</b>' + (separator + detail if separator else '')
+    p = Paragraph(left, ParagraphStyle('pair', fontName='CV',
                   fontSize=size, leading=12.1, textColor=INK))
     _, h = p.wrap(WIDTH - rw - 15, H)
     p.drawOn(c, LEFT, y - h)
     c.setFillColor(MUTED)
-    c.setFont('CV', 8.5)
+    c.setFont('CV-Italic', 8.5)
     c.drawRightString(RIGHT, y - 9.1, right)
     y -= h + gap
 
@@ -73,7 +77,7 @@ def bullet(value):
 
 
 def link(label, url):
-    return f'<a href="{url}" color="#385B4C">{label}</a>'
+    return f'<a href="{url}" color="#385B4C"><u>{label}</u></a>'
 
 
 def skill(label, value, gap=2):
@@ -87,11 +91,17 @@ def skill(label, value, gap=2):
 
 
 text('Xiongwei Luo', size=25, leading=29, bold=True, gap=5)
-text('AI Product &amp; Application Development', size=11.2, leading=14, color=ACCENT, gap=5)
-text('Zurich, Switzerland  |  +86 137 8924 2010  |  ' +
-     link('xiongweiluo1@gmail.com', 'mailto:xiongweiluo1@gmail.com'), size=8.6, leading=11.3, color=MUTED)
-text('Internship / Working Student  |  ' + link('GitHub', 'https://github.com/xiongweiluo') +
-     '  |  ' + link('Portfolio', 'https://xiongweiluo.github.io/'), size=8.6, leading=11.3, color=MUTED)
+text('AI Product &amp; Application Development', size=10.7, leading=14, color=ACCENT, bold=True, gap=6)
+text('Zurich, Switzerland  |  ' +
+     link('xiongweiluo1@gmail.com', 'mailto:xiongweiluo1@gmail.com'), size=8.6, leading=11.3, color=MUTED, gap=3)
+header_y = y
+text('Internship / Working Student', size=8.7, leading=11.3, color=MUTED, italic=True)
+links = Paragraph('<b>' + link('GitHub', 'https://github.com/xiongweiluo') +
+                  '   /   ' + link('Portfolio', 'https://xiongweiluo.github.io/') + '</b>',
+                  ParagraphStyle('header-links', fontName='CV', fontSize=8.7,
+                                 leading=11.3, textColor=ACCENT, alignment=2))
+_, links_h = links.wrap(170, H)
+links.drawOn(c, RIGHT - 170, header_y - links_h)
 
 section('Education')
 pair('ETH Zurich <font color="#5D6861">| MSc Integrated Building Systems</font>', 'Sep 2025 - Jul 2027 (expected)', bold=True)
