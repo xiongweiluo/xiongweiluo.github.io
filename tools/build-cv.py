@@ -95,7 +95,7 @@ text('Internship / Working Student  |  ' + link('GitHub', 'https://github.com/xi
 
 section('Education')
 pair('ETH Zurich <font color="#5D6861">| MSc Integrated Building Systems</font>', 'Sep 2025 - Jul 2027 (expected)', bold=True)
-text('Coursework: Machine Learning, Hands-On Deep Learning, Scientific Machine Learning, Building Agentic AI Systems.', size=8.6, leading=11.4, color=MUTED, gap=5)
+text('Coursework: Introduction to Machine Learning; Building Agentic AI Systems for Industry Transformation; Scientific Machine and Deep Learning for Design and Construction; Hands-On Deep Learning.', size=8.6, leading=11.4, color=MUTED, gap=5)
 pair('Tongji University <font color="#5D6861">| Bachelor of Architecture</font>', 'Sep 2019 - Jul 2025', bold=True)
 text('Urban data analysis and human-computer interaction; academic scholarships in four consecutive years.', size=8.6, leading=11.4, color=MUTED, gap=5)
 pair('National University of Singapore <font color="#5D6861">| Young Fellowship</font>', 'Jul 2025', bold=True)
