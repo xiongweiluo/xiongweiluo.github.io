@@ -138,7 +138,7 @@ bullet('Implemented asynchronous pre-review and exports with retries, idempotenc
 y -= 6
 pair('Family Garden <font color="#5D6861">| Collaborative AI Game</font>', '', bold=True)
 text('Team project  |  AI, backend &amp; game systems  |  ' +
-     link('Live demo', 'https://familygarden-d7gy18huh87fd41d2-1449262000.tcloudbaseapp.com/'), size=8.5, leading=11, color=MUTED, gap=4)
+     link('Live demo', 'https://ba6277773a1a9ee896440c7722da15a9.tchgame.cloud/'), size=8.5, leading=11, color=MUTED, gap=4)
 bullet('Built AI memory and image-analysis workflows with schema validation and moderation; implemented member identity, family data isolation, private photo storage and WebSocket presence.')
 bullet('Used transactions and operation identifiers for inventory, planting and harvesting; validated the Web release with <b>26/26 regression checks, 4/4 production E2E scenarios</b> and iPhone Safari checks.')
 
