@@ -7,11 +7,15 @@
 .jd-research .jd-research-comparison p{font-size:14px;line-height:1.7;color:#68717c}
 .jd-research-takeaway{margin-top:30px;padding-top:26px;border-top:1px solid #dbe2ec}
 .jd-research .jd-research-takeaway p{font-size:14px;line-height:1.75;margin-top:10px}
-.jd-research .jd-research-takeaway .jd-research-next{font-size:13px;color:#78828e;margin-top:8px}
+.jd-research-questions{margin:22px 0 0}
+.jd-research-questions>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:28px;padding:19px 0;border-top:1px solid #e8edf3}
+.jd-research-questions dt{font-size:15px;font-weight:600;line-height:1.65;color:#35475e}
+.jd-research-questions dd{font-size:14px;line-height:1.75;color:#68717c;margin:0}
 @media(max-width:700px){
 .jd-research-comparison{grid-template-columns:1fr;gap:28px;margin-top:23px}
 .jd-research-comparison img{max-width:320px;margin:16px auto}
 .jd-research .jd-research-comparison p{font-size:14px;line-height:1.75}
 .jd-research-takeaway{margin-top:26px;padding-top:24px}
+.jd-research-questions>div{grid-template-columns:1fr;gap:7px;padding:18px 0}
 }
 @media(max-width:380px){.jd-research-comparison article{grid-template-columns:1fr}.jd-research-comparison img{max-width:290px;margin:16px auto 0}.jd-research .jd-research-comparison p{margin-top:14px}}
