@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" role="img">
-<title>Intersecting</title>
+<title>Unwanted overlaps</title>
 <rect width="400" height="270" rx="10" fill="#f5f7f3"/>
 <ellipse cx="200" cy="229" rx="132" ry="19" fill="#e7ece3"/>
 <polyline points="135.6,147.2 347.2,223.1 264.4,252.8 52.8,176.9 135.6,147.2" fill="none" stroke="#b9c6ba" stroke-width="1.2" />
