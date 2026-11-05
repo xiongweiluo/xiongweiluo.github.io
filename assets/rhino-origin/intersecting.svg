@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270" role="img">
+<title>Intersecting</title>
+<rect width="400" height="270" rx="10" fill="#f5f7f3"/>
+<ellipse cx="200" cy="229" rx="132" ry="19" fill="#e7ece3"/>
+<polyline points="135.6,147.2 347.2,223.1 264.4,252.8 52.8,176.9 135.6,147.2" fill="none" stroke="#b9c6ba" stroke-width="1.2" />
+<polygon points="135.6,167.0 154.0,173.6 154.0,53.6 135.6,47.0" fill="#b1c3b5" stroke="#ffffff" stroke-width="1" />
+<polygon points="154.0,173.6 126.4,183.5 126.4,63.5 154.0,53.6" fill="#8ea795" stroke="#ffffff" stroke-width="1" />
+<polygon points="135.6,47.0 154.0,53.6 126.4,63.5 108.0,56.9" fill="#d7e2d5" stroke="#ffffff" stroke-width="1" />
+<polygon points="273.6,216.5 292.0,223.1 292.0,103.1 273.6,96.5" fill="#d6a271" stroke="#ffffff" stroke-width="1" />
+<polygon points="292.0,223.1 264.4,233.0 264.4,113.0 292.0,103.1" fill="#b98153" stroke="#ffffff" stroke-width="1" />
+<polygon points="273.6,96.5 292.0,103.1 264.4,113.0 246.0,106.4" fill="#f0d0aa" stroke="#ffffff" stroke-width="1" />
+<polygon points="117.2,37.1 319.6,109.7 319.6,84.7 117.2,12.1" fill="#b1c3b5" stroke="#ffffff" stroke-width="1" />
+<polygon points="319.6,109.7 282.8,122.9 282.8,97.9 319.6,84.7" fill="#8ea795" stroke="#ffffff" stroke-width="1" />
+<polygon points="117.2,12.1 319.6,84.7 282.8,97.9 80.4,25.3" fill="#d7e2d5" stroke="#ffffff" stroke-width="1" />
+<polygon points="273.6,71.5 292.0,78.1 292.0,40.1 273.6,33.5" fill="#d6a271" stroke="#ffffff" stroke-width="1" />
+<polygon points="292.0,78.1 264.4,88.0 264.4,50.0 292.0,40.1" fill="#b98153" stroke="#ffffff" stroke-width="1" />
+<polygon points="273.6,33.5 292.0,40.1 264.4,50.0 246.0,43.4" fill="#f0d0aa" stroke="#ffffff" stroke-width="1" />
+<polyline points="273.6,96.5 273.6,71.5 292.0,78.1 292.0,103.1" fill="none" stroke="#b9c6ba" stroke-width="1.2" style="stroke:#b98153;stroke-width:1.7" stroke-dasharray="3 3"/>
+</svg>

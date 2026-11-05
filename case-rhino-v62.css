@@ -1,3 +1,42 @@
 /* Copy-only refinement; shared type, numbering, shell and section spacing retained. */
 .r62-metric{font-size:12px!important;color:#788274!important;margin:0 0 20px!important}.r58-round>p{min-height:48px}
 @media(max-width:700px){.r58-round>p{min-height:0}}
+
+/* Project origin: scoped to RhinoCoder; shared case layout remains unchanged. */
+.case-rhino .r-origin-label{font-size:12px;letter-spacing:.07em;color:#788274;margin:0 0 16px}
+.case-rhino .r-origin>header{margin-bottom:28px}
+.r-origin-workflow{padding:25px 28px 20px;background:#f5f7f3;border-radius:10px}
+.r-origin-path{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;list-style:none;padding:0;margin:0}
+.r-origin-path li{position:relative;padding:0 14px 0 0}
+.r-origin-path small{display:block;font-size:11px;color:#788274;margin-bottom:7px}
+.r-origin-path strong{font-size:17px;font-weight:500;color:#344c3e}
+.r-origin-path li:not(:last-child)::after{content:'→';position:absolute;right:-10px;top:22px;font-size:19px;color:#819480}
+.r-origin-return{position:relative;display:flex;justify-content:space-between;gap:14px;margin-top:22px;padding-top:15px;border-top:1px solid #cdd8ca;color:#788274;font-size:11px;line-height:1.6}
+.r-origin-return::before{content:'↶';color:#819480;margin-right:-7px}
+.r-origin-return span:last-child{margin-left:auto}
+.r-origin-study{margin:25px 0 0}
+.r-origin-joints{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.r-origin-joints img{width:100%;height:auto;display:block}
+.r-origin-joints h3{font-size:14px;font-weight:500;margin:12px 0 0;color:#344c3e}
+.r-origin-joints h3::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:#bd8b5e;margin-right:8px;vertical-align:2px}
+.r-origin-study figcaption{font-size:11px;margin:15px 0 0;color:#788274}
+.r-origin-response{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:25px;padding-top:25px;border-top:1px solid #dce3db}
+.r-origin-response h3{font-size:19px;line-height:1.5;margin:0;max-width:26ch}
+.case-rhino .r-origin-response p{font-size:14px;line-height:1.8}
+@media(max-width:700px){
+ .r-origin-workflow{padding:22px}
+ .r-origin-path{grid-template-columns:1fr;gap:22px;padding-left:20px;border-left:1px solid #cdd8ca}
+ .r-origin-path li:not(:last-child)::after{content:'↓';left:-26px;right:auto;top:42px;background:#f5f7f3;font-size:14px}
+ .r-origin-path small{font-size:11px;margin-bottom:4px}
+ .r-origin-path strong{font-size:16px}
+ .r-origin-return{display:block;font-size:11px;margin-top:20px}
+ .r-origin-return::before{display:none}
+ .r-origin-return span{display:block}
+ .r-origin-return span:last-child{margin-top:3px}
+ .r-origin-joints{grid-template-columns:1fr;gap:20px}
+ .r-origin-joints>div{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:center}
+ .r-origin-joints h3{font-size:13px;margin:0}
+ .r-origin-study figcaption{font-size:10px}
+ .r-origin-response{grid-template-columns:1fr;gap:12px}
+ .r-origin-response h3{font-size:18px;max-width:none}
+}
