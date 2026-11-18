@@ -1,0 +1,31 @@
+/* Review fixes: keep every category discoverable and preserve one section index on phones. */
+.project-filters{flex-wrap:wrap;overflow:visible;column-gap:24px;row-gap:0}
+.experience-date,.experience-note,.project-kind,.work-count,.editorial-meta{color:#68725f}
+.footer-line{color:#707966}
+.intro-actions a{min-height:36px;display:inline-flex;align-items:center}
+.motion-toggle{min-height:36px}
+@media(min-width:701px) and (max-width:1020px){.intro h1{grid-row:2}.intro-actions{grid-row:3;align-self:start;margin-top:18px}}
+@media(max-width:700px){
+ .section-index{display:flex;flex-direction:row;justify-content:space-between;gap:10px;max-width:none;margin-top:24px;border-bottom:1px solid #e7ebe1}
+ .section-index a{justify-content:center;min-height:44px;border-bottom:0;padding:10px 0;position:relative}
+ .section-index .index-label{font-size:12px;white-space:nowrap}
+ .section-index .index-number{display:none}
+ .section-index a:after{content:'';height:1px;position:absolute;bottom:-1px;left:0;right:0;background:var(--accent);opacity:0}
+ .section-index a[aria-current="location"]:after{opacity:1}
+ .intro-actions{margin-top:16px}
+ .intro-actions a{min-height:44px}
+ .project-filters{column-gap:20px;overflow:visible;flex-wrap:wrap}
+ .filter-button{padding:10px 0 12px}
+ .motion-toggle{min-height:44px;font-size:12px;padding:7px 10px}
+}
+@media(prefers-reduced-motion:reduce){.section-index a:after{transition:none}}
+@media(max-width:700px){.project-filters{display:grid;grid-template-columns:repeat(3,max-content);justify-content:space-between;column-gap:12px}.filter-button{text-align:left}}
+
+/* Capabilities read as short keywords, not compound sentences. */
+.keyword-capabilities .skill-group ul{margin-top:12px}
+.keyword-capabilities .skill-group li{border-bottom:0;padding:5px 0;line-height:1.65}
+.keyword-capabilities .skill-columns{align-items:start;row-gap:32px}
+
+/* Fragment navigation focuses the gallery container. Keep that focus target for
+   skip links, without outlining the entire gallery; control focus stays visible. */
+#work[tabindex="-1"]:focus { outline: none; }

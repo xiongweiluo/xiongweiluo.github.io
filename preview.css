@@ -1,0 +1,73 @@
+/* Local preview v2: concise introduction, visual work index, compact experience. */
+:root { --muted:#656c62; --line:#e1e4dd; }
+html { scroll-padding-top:36px; }
+.intro-note { font-size:13px; color:var(--accent); margin-bottom:20px; }
+.intro-description { font-size:16px; line-height:1.7; color:var(--muted); margin-top:26px; max-width:29ch; }
+.section-index { display:flex; flex-direction:column; gap:13px; margin-top:36px; font-size:14px; }
+.section-index a { display:flex; gap:15px; align-items:baseline; }
+.section-index span { font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; }
+.section-index a:hover { color:var(--accent); }
+.intro-actions { gap:22px; font-size:14px; margin-top:35px; }
+.intro-actions a { border:0; padding-bottom:0; }
+.group-heading { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:26px; }
+.group-heading h2 { font-size:20px; letter-spacing:-.4px; font-weight:550; }
+.work-count,.cv-link { color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; }
+.cv-link:hover { text-decoration:underline; text-underline-offset:4px; }
+.caption { padding-top:16px; }
+.project-kind { font-size:12px; color:var(--muted); white-space:nowrap; }
+.project-description { color:var(--muted); font-size:15px; line-height:1.55; margin-top:7px; }
+.project-grid { row-gap:36px; }
+.cover { transition:opacity .2s ease; }
+.visual-link:hover .cover { opacity:.92; }
+.spatial-section { margin-top:60px; border-top:1px solid var(--line); padding-top:29px; }
+.spatial-grid { gap:30px 26px; }
+.spatial-image { aspect-ratio:16/9; margin-bottom:14px; }
+.spatial-project .project-heading h3 { font-size:23px; font-weight:550; }
+.spatial-project .project-one-liner { font-size:15px; margin-top:7px; }
+.background-section { margin-top:60px; border-top:1px solid var(--line); padding-top:29px; }
+.experience-list { margin-top:8px; }
+.experience-row { display:grid; grid-template-columns:145px 1fr; gap:25px; padding:20px 0; }
+.experience-type { font-size:13px; color:var(--muted); line-height:1.8; }
+.experience-type span { font-size:12px; }
+.experience-row h3 { font-size:20px; letter-spacing:-.4px; font-weight:550; }
+.experience-row p { font-size:15px; line-height:1.6; margin-top:6px; color:var(--muted); }
+.contact-section { margin-top:34px; padding:23px 0; }
+.contact-links { display:flex; gap:25px; font-size:14px; }
+.contact-links a:hover { text-decoration:underline; text-underline-offset:5px; }
+.footer-line { margin-top:25px; font-size:12px; padding-top:0; border:0; }
+@media(min-width:1021px) { .intro { top:28px; } }
+@media(min-width:701px) and (max-width:1020px) {
+ .intro { display:grid; grid-template-columns:1fr 1fr; column-gap:40px; padding-bottom:42px; }
+ .intro-note { grid-column:1/-1; grid-row:1; margin-bottom:17px; }
+ .intro h1 { grid-column:1; grid-row:2/4; font-size:38px; }
+ .intro-description { grid-column:2; grid-row:2; margin:0; max-width:none; }
+ .section-index { grid-column:2; grid-row:3; margin-top:20px; gap:9px; }
+ .intro-actions { grid-column:1; grid-row:4; align-self:start; margin-top:23px; }
+}
+@media(max-width:700px) {
+ .site-header { height:79px; }
+ .wordmark { font-size:22px; }
+ .site-header nav { gap:17px; font-size:14px; }
+ .site-header nav a:first-child { display:none; }
+ .page-layout { padding-top:29px; }
+ .intro { display:block; padding-bottom:39px; }
+ .intro-note { font-size:13px; margin-bottom:18px; }
+ .intro h1 { font-size:40px; }
+ .intro-description { font-size:16px; margin-top:21px; max-width:37ch; }
+ .section-index { display:none; }
+ .intro-actions { margin-top:23px; }
+ .group-heading { margin-bottom:21px; }
+ .group-heading h2 { font-size:19px; }
+ .project-heading h3 { font-size:24px; }
+ .project-description { font-size:15px; }
+ .project-grid { gap:30px; }
+ .spatial-section,.background-section { margin-top:43px; padding-top:25px; }
+ .spatial-grid { gap:28px; }
+ .spatial-project .project-heading h3 { font-size:23px; }
+ .experience-row { grid-template-columns:1fr; gap:8px; padding:16px 0; }
+ .experience-type br { display:none; }
+ .experience-type span { margin-left:10px; }
+ .contact-section { margin-top:25px; }
+}
+@media(max-width:360px) { .site-header nav { gap:12px; font-size:13px; } .wordmark {font-size:20px;} }
+@media(prefers-reduced-motion:reduce) { .cover { transition:none; } }

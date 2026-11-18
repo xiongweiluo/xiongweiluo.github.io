@@ -1,0 +1,10 @@
+/* Local case update: keep the project visuals, clarify the two development stages. */
+:root{--paper:#fff}
+.site-header{width:calc(100% - 96px);max-width:1080px}
+.masthead{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.site-header .wordmark{font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-.7px;white-space:nowrap;padding:10px 0;text-decoration:none}
+.masthead-label{font-size:10px;letter-spacing:.055em;color:#89917f;padding-left:18px;border-left:1px solid #e1e5d9;line-height:1.5}
+.site-header .top-page-nav a:after{content:'';position:absolute;left:0;right:0;transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.site-header .top-page-nav a:hover:after,.site-header .top-page-nav a:focus-visible:after{transform:scaleX(1)}
+
+@media(max-width:700px){.site-header{width:calc(100% - 40px)}.site-header .masthead{justify-content:space-between}.masthead-label{padding-left:0;border:0}}

@@ -1,0 +1,24 @@
+/* Local case update: keep the project visuals, clarify the two development stages. */
+:root{--paper:#fff}
+.site-header{width:calc(100% - 96px);max-width:1080px}
+.masthead{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.site-header .wordmark{font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-.7px;white-space:nowrap;padding:10px 0;text-decoration:none}
+.masthead-label{font-size:10px;letter-spacing:.055em;color:#89917f;padding-left:18px;border-left:1px solid #e1e5d9;line-height:1.5}
+.site-header .top-page-nav a:after{content:'';position:absolute;left:0;right:0;transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.site-header .top-page-nav a:hover:after,.site-header .top-page-nav a:focus-visible:after{transform:scaleX(1)}
+.jd-development{margin:40px 0 48px}
+.jd-development-heading{margin-bottom:24px}
+.jd-development-heading h2{font-size:24px;letter-spacing:-.5px}
+.jd-development-heading>p{font-size:14px;color:var(--muted);margin-top:7px}
+.jd-phase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;border-top:1px solid var(--line);padding-top:24px}
+.jd-phase-grid article{min-width:0}
+.jd-phase-label{font-size:11px;color:var(--accent);letter-spacing:.03em;margin-bottom:12px}
+.jd-phase-grid h3{font-size:18px;letter-spacing:-.3px;line-height:1.4;margin-bottom:12px}
+.jd-phase-grid article>p:not(.jd-phase-label){font-size:14px;line-height:1.8;color:var(--muted)}
+.jd-phase-grid article>.jd-phase-stack{font-size:12px!important;color:#52634a!important;margin-top:18px}
+.jd-development-note{border-top:1px solid var(--line);padding-top:16px;margin-top:24px;font-size:12px;line-height:1.7;color:var(--muted)}
+@media(max-width:700px){.site-header{width:calc(100% - 40px)}.site-header .masthead{justify-content:space-between}.masthead-label{padding-left:0;border:0}.jd-development{margin:32px 0 36px}.jd-development-heading h2{font-size:22px}.jd-phase-grid{grid-template-columns:1fr;gap:24px}.jd-phase-grid article+article{padding-top:24px;border-top:1px solid var(--line)}}
+
+/* Concise case overview: retain only role and scope. */
+.case-jd .intro-facts[data-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.case-jd .intro-facts[data-count="2"] dd{max-width:none}

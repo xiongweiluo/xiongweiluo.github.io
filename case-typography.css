@@ -1,0 +1,23 @@
+/* One compact type scale across all local project details. */
+.compact-case .case-introduction h1{font-size:32px;line-height:1.15;font-weight:600;letter-spacing:-1px;margin-bottom:14px}
+.compact-case .case-introduction .project-type{font-size:11px;line-height:1.5;margin-bottom:10px}
+.compact-case .case-introduction .case-lede{font-size:15px;line-height:1.65;letter-spacing:0;max-width:64ch;margin-bottom:26px}
+.compact-case .intro-facts{gap:20px 24px;padding:22px 0}
+.compact-case .intro-facts dt{font-size:10px;line-height:1.5;margin-bottom:6px}
+.compact-case .intro-facts dd,.compact-case .intro-facts .intro-methods dd{font-size:13px;line-height:1.65}
+.compact-case .intro-links a{font-size:12px;line-height:1.5;min-height:40px;display:inline-flex;align-items:center;padding:8px 15px}
+.compact-case .back-link{font-size:12px}
+.compact-case .case-shell :is(.jd-section44,.fg-heading,.context-grid,.context-summary,.jd-development-heading) h2,
+.compact-case .case-shell article>section>h2{font-size:20px;line-height:1.35;letter-spacing:-.35px}
+.compact-case .case-shell .chapter-head h3{font-size:18px;line-height:1.4}
+.compact-case .case-shell :is(.chapter-head,.fg-heading,.context-grid,.context-summary)>p,
+.compact-case .case-shell .jd-section44>header>p{font-size:13px;line-height:1.75}
+@media(max-width:700px){
+ .compact-case .case-introduction h1{font-size:28px;letter-spacing:-.7px}
+ .compact-case .case-introduction .case-lede{font-size:14px;line-height:1.65}
+ .compact-case .intro-facts{gap:18px 20px;padding:20px 0}
+ .compact-case .intro-links a{min-height:44px}
+}
+
+.compact-case .case-shell section h2{font-size:20px;line-height:1.35;letter-spacing:-.35px}
+.compact-case .case-shell section>header>p{font-size:13px;line-height:1.75}

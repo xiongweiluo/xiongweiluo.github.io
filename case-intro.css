@@ -1,0 +1,78 @@
+/* Selected layout C: shared text-only introduction for all local project details. */
+.compact-case { --case-opening-space: 48px; }
+.compact-case .case-introduction {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  grid-template-areas: "identity facts" "lede facts" "links facts";
+  grid-template-rows: auto auto 1fr;
+  gap: 18px 48px;
+  align-items: start;
+  text-align: left;
+}
+.compact-case .case-introduction:not(:has(.intro-links)) {
+  grid-template-areas: "identity facts" "lede facts";
+  grid-template-rows: auto 1fr;
+}
+.compact-case .case-introduction .intro-identity { grid-area: identity; min-width: 0; }
+.compact-case .case-introduction .project-type { margin: 0 0 12px; }
+.compact-case .case-introduction h1 { margin: 0; overflow-wrap: normal; }
+.compact-case .case-introduction .case-lede {
+  grid-area: lede; min-width: 0; margin: 0; max-width: none;
+  color: #596153;
+}
+.compact-case .case-introduction .intro-facts {
+  grid-area: facts; min-width: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0 0 0 32px;
+  margin: 0;
+  border: 0;
+  border-left: 1px solid var(--line);
+}
+.compact-case .case-introduction .intro-facts dd { max-width: none; overflow-wrap: break-word; }
+.compact-case .case-introduction .intro-links {
+  grid-area: links; justify-content: flex-start; align-items: start;
+  flex-wrap: wrap; gap: 12px 24px; margin: 8px 0 0;
+}
+.compact-case .case-introduction .intro-links a {
+  border: 0; border-bottom: 1px solid #cdd6c5; border-radius: 0;
+  padding: 6px 0; min-height: 40px; color: var(--accent);
+  background: transparent; text-decoration: none;
+  transition: color .15s, border-color .15s;
+}
+.compact-case .case-introduction .intro-links a:hover {
+  color: var(--ink); border-color: var(--ink); background: transparent;
+}
+/* One rhythm from introduction to opening media, then into the first chapter.
+   Keep the internal layout of each cover and later chapter spacing intact. */
+.compact-case .case-shell > .case-introduction + :is(.case-hero, .r56),
+.compact-case .case-shell > .case-hero + :is(.edit50, .fg-editorial, .jd-editorial44) {
+  margin-top: var(--case-opening-space);
+}
+@media (min-width: 701px) and (max-width: 800px) {
+  .compact-case .case-introduction { column-gap: 28px; }
+  .compact-case .case-introduction .intro-facts { padding-left: 24px; column-gap: 18px; }
+}
+@media (max-width: 700px) {
+  .compact-case { --case-opening-space: 32px; }
+  .compact-case .case-introduction {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "identity" "lede" "facts" "links";
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+  .compact-case .case-introduction:not(:has(.intro-links)) {
+    grid-template-areas: "identity" "lede" "facts";
+    grid-template-rows: auto;
+  }
+  .compact-case .case-introduction .project-type { margin-bottom: 10px; }
+  .compact-case .case-introduction .intro-facts {
+    gap: 20px; border-left: 0; border-top: 1px solid var(--line);
+    margin-top: 8px; padding: 20px 0 0;
+  }
+  .compact-case .case-introduction .intro-links { margin-top: 8px; }
+  .compact-case .case-introduction .intro-links a { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .compact-case .case-introduction .intro-links a { transition: none; }
+}

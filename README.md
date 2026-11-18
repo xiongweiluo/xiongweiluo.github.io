@@ -28,4 +28,4 @@ Check deployment status under the repository's Actions tab and Settings → Page
 
 ## Included content
 
-Homepage, eight case studies, six embedded LabelHub interface views, CV, and referenced media. Historical previews, alternative layouts and unused assets are excluded. The original editing workspace is preserved separately.
+Projects homepage, About, Contact, eight case studies, six embedded LabelHub interface views, CV, and referenced media. Historical previews, alternative layouts and unused assets are excluded. The original editing workspace is preserved separately.

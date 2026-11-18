@@ -1,0 +1,26 @@
+/* Projects and About share the same shell; navigation is per page. */
+.page-index a[aria-current="page"]{background:none;color:#35472d}
+.page-index a[aria-current="page"] .index-label{font-weight:550;color:#35472d}
+.page-index a[aria-current="page"] .index-number{color:#687d58}
+.page-index a[aria-current="page"] .index-number:before{transform:scaleX(1)}
+.portfolio-about .text-capabilities{margin-top:0;padding-top:0;border-top:0}
+.portfolio-about .skill-columns{column-gap:24px;align-items:stretch}
+.portfolio-about .skill-group{border-left:1px solid #e4e8de;padding-left:18px}
+.portfolio-about .skill-title{border-bottom:0;padding-bottom:0;min-height:22px;align-items:start}
+.portfolio-about .skill-title h3{font-size:15px;line-height:1.45;letter-spacing:-.25px}
+.portfolio-about .skill-group ul{margin-top:16px}
+.portfolio-about .skill-group li{padding:4px 0;font-size:13px;line-height:1.65}
+.portfolio-projects .contact-section{margin-top:48px;border-top:1px solid var(--line);padding-top:22px}
+@media(min-width:1200px){.portfolio-about .skill-columns{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.portfolio-about .skill-group{padding-left:14px}.portfolio-about .skill-title h3{font-size:14px}}
+@media(max-width:700px){
+ .page-index{justify-content:flex-start;gap:28px}
+ .page-index a[aria-current="page"]:after{opacity:1}
+ .portfolio-about .skill-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+ .portfolio-about .skill-group{padding-left:12px}
+ .portfolio-about .skill-title{min-height:44px}
+ .portfolio-about .skill-title h3{font-size:14px}
+ .portfolio-about .skill-group li{font-size:12px;overflow-wrap:break-word;padding:4px 0}
+ .portfolio-about .skill-group ul{margin-top:12px}
+ .portfolio-projects .contact-section{margin-top:32px}
+}
+@media(max-width:360px){.portfolio-about .skill-columns{grid-template-columns:1fr;gap:26px}.portfolio-about .skill-title{min-height:0}.portfolio-about .skill-group li{font-size:13px}}

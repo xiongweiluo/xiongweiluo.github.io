@@ -1,0 +1,31 @@
+/* v6 — a quieter sidebar and fewer repeated elements. */
+.intro{max-width:250px}
+.intro-note{font-size:10px;line-height:1.5;letter-spacing:.11em;text-transform:uppercase;color:#73806a;margin-bottom:20px}
+.intro h1{font-size:28px;line-height:1.26;letter-spacing:-1px;font-weight:550}
+.intro h1 span{color:#727b6a}
+.intro-description{font-size:14px;line-height:1.8;max-width:27ch;margin-top:22px;color:#73796d}
+.section-index{border:0;gap:0;margin-top:36px;max-width:235px}
+.section-index a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;min-height:44px;border-bottom:1px solid #eceee8;color:#7c8475;background:none;transition:color .18s ease}
+.section-index a:before{display:none}
+.section-index .index-label{font-family:inherit;font-size:13px;line-height:1.5;color:inherit;transition:transform .18s ease}
+.section-index .index-number{font:10px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;color:#9ba290;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:9px}
+.section-index .index-number:before{content:'';display:block;width:13px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:right;transition:transform .18s ease}
+.section-index a[aria-current="location"]{background:none;color:#35472d}
+.section-index a[aria-current="location"] .index-label{font-weight:550;color:#35472d}
+.section-index a[aria-current="location"] .index-number{color:#687d58}
+.section-index a[aria-current="location"] .index-number:before{transform:scaleX(1)}
+.intro-actions{display:flex;gap:22px;margin-top:25px;font-size:12px;color:#67715d}
+.intro-actions a{padding:4px 0;line-height:1.8}
+.experience-name{font-size:17px;line-height:1.35;letter-spacing:-.25px}
+.experience-role{font-size:12px;line-height:1.6}
+.experience-identity{gap:5px}
+.experience-entry summary{padding:22px 0}
+.experience-detail p{font-size:12px;line-height:1.8}
+.experience-detail{padding-bottom:22px}
+.contact-section{border-top:0;margin-top:24px;padding-top:0}
+.footer-line{margin-top:0;padding-top:0;font-size:11px;color:#8b9283}
+@media(hover:hover){.section-index a:hover{background:none;color:#35472d}.section-index a:hover .index-label{transform:translateX(3px)}}
+@media(min-width:701px) and (max-width:1020px){.intro{max-width:none}.intro h1{font-size:30px}.intro-description{max-width:32ch}.section-index{margin-top:18px;max-width:none}.intro-actions{margin-top:22px}}
+@media(max-width:700px){.intro{max-width:none;padding-bottom:38px}.intro-note{font-size:10px;margin-bottom:16px}.intro h1{font-size:32px;letter-spacing:-1px;line-height:1.2}.intro-description{font-size:14px;max-width:35ch;margin-top:18px}.intro-actions{margin-top:20px;gap:25px;font-size:13px}.section-index{display:none}.site-header nav{gap:13px;font-size:12px}.site-header nav a:first-child,.site-header nav .skills-nav{display:inline}.wordmark{font-size:20px}.experience-name{font-size:17px}.experience-role{font-size:12px}.experience-entry summary{padding:20px 0}.experience-date{font-size:10px}.experience-category{font-size:9px}.experience-detail p{font-size:13px}.experience-meta{gap:12px}.contact-section{margin-top:24px}.footer-line{font-size:10px}}
+@media(max-width:360px){.wordmark{font-size:18px}.site-header nav{font-size:11px;gap:10px}.intro h1{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.section-index a,.section-index .index-label,.section-index .index-number:before{transition:none}}

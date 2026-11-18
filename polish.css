@@ -1,0 +1,78 @@
+/* v7 — shared spacing rhythm and a compact typographic masthead. */
+:root{--layout-gap:48px;--section-space:64px;--content-gap:24px}
+.site-header{height:88px;border-bottom:1px solid #e5e8df;gap:32px}
+.masthead{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.site-header .wordmark{font-size:20px;line-height:1.3;font-weight:600;letter-spacing:-.7px;white-space:nowrap;padding:10px 0}
+.masthead-label{font-size:10px;letter-spacing:.055em;color:#89917f;padding-left:18px;border-left:1px solid #e1e5d9;line-height:1.5}
+.site-header nav{height:100%;display:flex;align-items:stretch;gap:30px;font-size:12px}
+.site-header nav a{position:relative;display:inline-flex;align-items:center;gap:8px;padding:0 2px;min-height:44px;color:#7b8373;transition:color .18s ease}
+.header-number{font:9px/1 ui-monospace,SFMono-Regular,Consolas,monospace;color:#9ca490;transition:color .18s ease}
+.site-header nav a:after{content:'';position:absolute;height:2px;left:0;right:0;bottom:-1px;background:#647955;transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.site-header nav a[aria-current="location"]{color:#35462c}
+.site-header nav a[aria-current="location"] .header-number{color:#6d805d}
+.site-header nav a[aria-current="location"]:after{transform:scaleX(1)}
+.site-header nav a:hover{text-decoration:none;color:#35462c}
+.site-header nav a:hover:after{transform:scaleX(1)}
+.page-layout{padding-top:48px;column-gap:48px}
+.intro{padding-top:0}
+.group-heading{margin-bottom:24px;min-height:25px;align-items:baseline}
+.group-heading h2{font-size:21px;line-height:1.25;letter-spacing:-.6px}
+.project-filters{margin:0 0 28px;gap:24px}
+.filter-button{font-size:13px;padding:10px 0 14px}
+.project-grid,.unified-gallery{column-gap:24px;row-gap:40px}
+.caption{padding-top:14px}
+.project-heading{gap:12px}
+.project-heading h3,.unified-gallery .spatial-project .project-heading h3{font-size:23px;line-height:1.25;letter-spacing:-.65px;font-weight:550}
+.project-description,.unified-gallery .project-one-liner{font-size:14px;line-height:1.6;margin-top:6px}
+.project-kind{font-size:11px}
+.unified-gallery .spatial-image{margin-bottom:14px}
+.text-capabilities,.text-experience{margin-top:64px;padding-top:28px}
+.text-capabilities>.group-heading{margin-bottom:32px}
+.skill-columns{column-gap:40px;row-gap:32px}
+.skill-title{padding-bottom:12px}
+.skill-group ul{margin-top:8px}
+.skill-group li{padding:10px 0}
+.text-experience>.group-heading{margin-bottom:16px}
+.experience-entry summary{padding:24px 0}
+.experience-detail{padding-bottom:24px}
+.contact-section{margin-top:28px;padding-bottom:32px}
+.footer-line{line-height:1.6}
+@media(min-width:701px) and (max-width:1020px){.page-layout{padding-top:40px}.intro{padding-bottom:48px}.site-header nav{gap:22px}.masthead{gap:14px}.masthead-label{padding-left:14px}}
+@media(max-width:700px){
+ :root{--section-space:48px}
+ html{scroll-padding-top:128px}
+ .site-header{position:sticky;top:0;z-index:10;height:108px;display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+ .masthead{height:60px;justify-content:space-between;gap:14px}
+ .site-header .wordmark{font-size:20px;padding:8px 0}
+ .masthead-label{font-size:10px;border-left:0;padding-left:0}
+ .site-header nav{height:48px;justify-content:space-between;gap:12px;font-size:12px}
+ .site-header nav a,.site-header nav a:first-child,.site-header nav .skills-nav{display:inline-flex;gap:6px;min-height:44px;padding:0 0 8px}
+ .header-number{font-size:8px}
+ .page-layout{padding-top:32px;gap:0}
+ .intro{padding-bottom:40px}
+ .intro-note{margin-bottom:16px}
+ .intro h1{font-size:30px;line-height:1.23}
+ .intro-description{margin-top:20px;line-height:1.8}
+ .intro-actions{margin-top:20px;gap:24px}
+ .group-heading{margin-bottom:20px}
+ .group-heading h2{font-size:20px}
+ .project-filters{margin-bottom:24px;gap:22px}
+ .filter-button{font-size:13px;padding:10px 0 12px}
+ .project-grid,.unified-gallery{row-gap:32px}
+ .project-heading h3,.unified-gallery .spatial-project .project-heading h3{font-size:22px}
+ .project-description,.unified-gallery .project-one-liner{font-size:14px}
+ .caption{padding-top:12px}
+ .unified-gallery .spatial-image{margin-bottom:12px}
+ .text-capabilities,.text-experience{margin-top:48px;padding-top:24px}
+ .text-capabilities>.group-heading{margin-bottom:28px}
+ .skill-columns{row-gap:28px}
+ .text-experience>.group-heading{margin-bottom:12px}
+ .experience-entry summary{padding:22px 0;row-gap:10px}
+ .contact-section{margin-top:24px;padding-bottom:28px}
+}
+@media(max-width:360px){.intro h1{font-size:28px}.site-header nav{font-size:11px;gap:10px}.site-header .wordmark{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.site-header nav a,.header-number,.site-header nav a:after{transition:none}}
+
+/* v8: section navigation lives in the sidebar only. */
+.site-header{height:76px}
+@media(max-width:700px){.site-header{height:68px;position:static;background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}.masthead{height:67px}html{scroll-padding-top:28px}}

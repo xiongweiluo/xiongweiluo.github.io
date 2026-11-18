@@ -1,0 +1,103 @@
+/* Three pages, one navigation, and a single contact directory. */
+.site-header{height:76px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+.site-header .top-page-nav{display:flex;align-items:center;gap:28px;height:100%;font-size:13px;flex-shrink:0}
+.site-header .top-page-nav a{display:inline-flex;align-items:center;position:relative;min-height:44px;min-width:44px;justify-content:center;padding:10px 0;color:#7b8275;white-space:nowrap;text-decoration:none}
+.site-header .top-page-nav a:after{bottom:4px;height:1px;background:#6f805e}
+.site-header .top-page-nav a[aria-current="page"]{color:#35462c}
+.site-header .top-page-nav a[aria-current="page"]:after{transform:scaleX(1)}
+.site-header .top-page-nav a:hover{color:#35462c}
+.contact-page-content .group-heading{margin-bottom:24px}
+.contact-directory{border-top:1px solid var(--line)}
+.contact-entry{display:grid;grid-template-columns:94px minmax(0,1fr) 20px;align-items:baseline;gap:24px;border-bottom:1px solid #e7eae2;padding:28px 0;min-height:88px}
+.contact-label{font-size:12px;color:#77826d}
+.contact-value{font-size:20px;line-height:1.5;font-weight:450;letter-spacing:-.4px;overflow-wrap:anywhere;transition:color .18s ease}
+.contact-format{font-size:10px;letter-spacing:.05em;color:#87917d;vertical-align:middle;margin-left:10px}
+.contact-arrow{font-size:17px;color:#849177;justify-self:end;transition:transform .18s ease,color .18s ease}
+.contact-entry:hover .contact-value,.contact-entry:focus-visible .contact-value{color:var(--accent)}
+.contact-entry:hover .contact-arrow{color:var(--accent);transform:translate(2px,-2px)}
+.portfolio-contact #main{min-height:calc(100svh - 172px);display:flex;flex-direction:column}
+.portfolio-contact .contact-section{margin-top:auto;padding-top:48px}
+@media(min-width:701px) and (max-width:1020px){.intro h1{grid-row:2}.intro-description{grid-row:2}.intro{padding-bottom:40px}}
+@media(max-width:700px){
+ .site-header{height:106px;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0}
+ .site-header .masthead{height:58px;min-height:58px}
+ .site-header .top-page-nav{height:48px;justify-content:flex-end;gap:25px;font-size:12px}
+ .site-header .top-page-nav a,.site-header .top-page-nav a:first-child{display:inline-flex;min-height:44px;padding:8px 0 12px}
+ .site-header .top-page-nav a:after{bottom:5px}
+ .contact-entry{grid-template-columns:1fr 18px;gap:8px 14px;padding:23px 0}
+ .contact-label{grid-column:1;grid-row:1;font-size:11px}
+ .contact-value{grid-column:1;grid-row:2;font-size:18px}
+ .contact-arrow{grid-column:2;grid-row:2;align-self:center}
+ .portfolio-contact #main{min-height:0}
+ .portfolio-contact .contact-section{padding-top:40px;margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.contact-value,.contact-arrow{transition:none}}
+
+/* Shared three-page rhythm and navigation review. */
+html{scrollbar-gutter:stable;scroll-padding-top:100px}
+.site-header{position:sticky;top:0;z-index:10;background:var(--paper)}
+.site-header::before{content:"";position:absolute;inset:0 calc((min(1080px,100vw - 96px) - 100vw)/2);background:var(--paper);z-index:-1}
+.site-header .top-page-nav a{color:#626c5b}
+.site-header .top-page-nav a:focus-visible:after{transform:scaleX(1)}
+.intro{top:104px}
+.portfolio-projects .contact-section,.portfolio-about .contact-section,.portfolio-contact .contact-section{border-top:1px solid var(--line);margin-top:48px;padding:20px 0 28px}
+.portfolio-contact #main{min-height:0;display:block}
+.footer-line{gap:20px;min-height:44px;font-size:11px}
+.footer-line a{display:inline-flex;min-height:44px;align-items:center;white-space:nowrap}
+.portfolio-about .skill-group li:hover{transform:none;color:#626b5d}
+.experience-entry summary:hover .experience-identity{transform:none}
+.experience-entry[open] .expand-mark{color:var(--accent)}
+a:focus-visible,button:focus-visible,.experience-entry summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(min-width:701px) and (max-width:1020px){.intro-description{margin-top:0;align-self:center}}
+@media(max-width:700px){
+ html{scroll-padding-top:126px}
+ .site-header::before{inset:0 -20px}
+ .portfolio-about .skill-title{min-height:0}
+ .portfolio-about .skill-title h3{font-size:13px;line-height:1.5}
+ .portfolio-about .skill-group ul{margin-top:16px}
+ .portfolio-projects .contact-section,.portfolio-about .contact-section,.portfolio-contact .contact-section{margin-top:32px;padding:16px 0 20px}
+ .contact-value{font-size:18px}
+}
+
+/* All project covers share one frame; SVG crops fill it without letterboxing. */
+.unified-gallery .cover,.unified-gallery .spatial-image{aspect-ratio:16/9;border-radius:6px;overflow:hidden}
+
+/* Quieter project captions, shared across every homepage card. */
+.portfolio-projects .unified-gallery .project-heading h3{font-weight:600;font-size:14px;line-height:1.4;letter-spacing:-.1px}
+.portfolio-projects .unified-gallery .project-description,.portfolio-projects .unified-gallery .project-one-liner{font-size:12px;line-height:1.6;margin-top:5px}
+.portfolio-projects .unified-gallery .project-heading h3 a::after{font-size:14px}
+
+/* One caption structure and spacing scale for all eight projects. */
+.portfolio-projects .unified-gallery{row-gap:36px;column-gap:24px}
+.portfolio-projects .unified-gallery .caption{padding-top:12px}
+.portfolio-projects .unified-gallery .spatial-image{margin-bottom:0}
+.portfolio-projects .unified-gallery .project-heading h3,
+.portfolio-projects .unified-gallery .project-kind{line-height:20px}
+.portfolio-projects .unified-gallery .project-description,
+.portfolio-projects .unified-gallery .project-one-liner{margin-top:4px}
+@media(max-width:700px){.portfolio-projects .unified-gallery{row-gap:32px}}
+
+.portfolio-projects .unified-gallery .project-heading{align-items:center}
+
+/* Consistent current section and return controls across local case studies. */
+.site-header .top-page-nav a[aria-current="location"]{color:#35462c}
+.site-header .top-page-nav a[aria-current="location"]:after{transform:scaleX(1)}
+.compact-case .back-link{min-height:44px;display:inline-flex;align-items:center}
+.compact-case .case-pagination>a{min-height:44px;display:flex;flex-direction:column;justify-content:center}
+.compact-case .case-pagination .all-projects{display:flex;align-items:center}
+@media(max-width:900px){
+ .compact-case .case-pagination{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .compact-case .case-pagination>a:first-child{grid-column:1;grid-row:1}
+ .compact-case .case-pagination>a:last-child{grid-column:2;grid-row:1}
+ .compact-case .case-pagination .all-projects{grid-column:1/-1;grid-row:2;justify-self:center}
+}
+
+/* Compact identity shared by the homepage, profile, contact and case studies. */
+.site-header .masthead{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;min-width:0;flex-shrink:1}
+.site-header .masthead .wordmark{padding:0;line-height:1.3}
+.site-header .masthead-label{border:0;padding:0;font-size:11px;line-height:1.5;letter-spacing:0;color:#858c7e}
+@media(max-width:700px){
+ .site-header{height:122px}
+ .site-header .masthead{height:74px;min-height:74px;justify-content:center;align-items:flex-start}
+ html{scroll-padding-top:142px}
+}
