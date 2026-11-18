@@ -1,6 +1,11 @@
 (()=>{
  const cards=[...document.querySelectorAll('#work article[data-categories]')];
  const filters=[...document.querySelectorAll('[data-filter]')];
+ filters.forEach(button=>{
+  const count=cards.filter(card=>button.dataset.filter==='all'||card.dataset.categories.split(' ').includes(button.dataset.filter)).length;
+  const badge=button.querySelector('span');
+  if(badge)badge.textContent=String(count);
+ });
  function applyFilter(button){
   if(!button)return;
   const filter=button.dataset.filter;let count=0;
@@ -11,7 +16,8 @@
   document.querySelector('#filter-status').textContent=`Showing ${count} projects: ${button.childNodes[0].textContent.trim()}.`;
  }
  function restoreFilter(){
-  const category=new URL(location.href).searchParams.get('category')||'all';
+  const requestedCategory=new URL(location.href).searchParams.get('category')||'all';
+  const category=requestedCategory==='computation'?'fabrication':requestedCategory;
   applyFilter(filters.find(button=>button.dataset.filter===category)||filters[0]);
  }
  filters.forEach(button=>button.addEventListener('click',()=>{
