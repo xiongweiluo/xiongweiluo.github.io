@@ -92,12 +92,19 @@ a:focus-visible,button:focus-visible,.experience-entry summary:focus-visible{out
  .compact-case .case-pagination .all-projects{grid-column:1/-1;grid-row:2;justify-self:center}
 }
 
-/* Compact identity shared by the homepage, profile, contact and case studies. */
-.site-header .masthead{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;min-width:0;flex-shrink:1}
-.site-header .masthead .wordmark{padding:0;line-height:1.3}
-.site-header .masthead-label{border:0;padding:0;font-size:11px;line-height:1.5;letter-spacing:0;color:#858c7e}
+/* Horizontal identity: keep the education and experience to the right of the name. */
+.site-header .masthead{display:flex;flex-direction:row;align-items:baseline;justify-content:flex-start;gap:20px;min-width:0;flex-shrink:1}
+.site-header .masthead .wordmark{padding:0;font-size:18px;line-height:1.4;letter-spacing:-.5px;flex-shrink:0;white-space:nowrap}
+.site-header .masthead-label{border:0;padding:0;font-size:14px;line-height:1.5;letter-spacing:0;color:#7a8273;min-width:0}
+@media(max-width:980px){
+ .site-header{height:118px;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0}
+ .site-header .masthead{height:70px;min-height:70px;align-items:center;justify-content:flex-start}
+ .site-header .top-page-nav{height:48px;justify-content:flex-end}
+ .site-header .masthead-label{font-size:13px}
+ html{scroll-padding-top:138px}
+}
 @media(max-width:700px){
- .site-header{height:122px}
- .site-header .masthead{height:74px;min-height:74px;justify-content:center;align-items:flex-start}
- html{scroll-padding-top:142px}
+ .site-header .masthead{gap:12px}
+ .site-header .masthead .wordmark{font-size:17px}
+ .site-header .masthead-label{flex:1}
 }
