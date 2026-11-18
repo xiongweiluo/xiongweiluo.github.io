@@ -1,0 +1,22 @@
+/* Homepage sidebar: compact type and a shared top alignment with projects. */
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .page-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 48px; padding-top: 44px; align-items: start; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro { position: sticky; top: 104px; display: block; max-width: 250px; padding: 0; margin: 0; border: 0; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro h1 { margin: 0; max-width: none; font-size: 26px; font-weight: 550; line-height: 32px; letter-spacing: -.65px; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro h1 span { color: #747d6e; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro-focus { list-style: none; padding: 0; margin: 24px 0 0; color: #626d5b; font-size: 14px; font-weight: 500; line-height: 24px; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro-focus li { margin: 0; padding: 0; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) #main > section:first-child > .group-heading { min-height: 32px; align-items: baseline; }
+:is(.portfolio-projects, .portfolio-about, .portfolio-contact) #main > section:first-child > .group-heading h2 { line-height: 32px; }
+@media (min-width: 701px) and (max-width: 1020px) {
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .page-layout { grid-template-columns: 220px minmax(0, 1fr); column-gap: 32px; padding-top: 36px; }
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro { top: 146px; }
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro h1 { font-size: 24px; line-height: 31px; }
+}
+@media (max-width: 700px) {
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .page-layout { display: block; padding-top: 28px; }
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro { position: static; max-width: none; padding-bottom: 36px; }
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro h1 { font-size: 26px; line-height: 32px; }
+ :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro-focus { margin-top: 18px; font-size: 14px; line-height: 23px; }
+}
+
+.footer-line { justify-content: flex-end; }

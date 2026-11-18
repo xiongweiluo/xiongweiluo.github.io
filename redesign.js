@@ -6,7 +6,8 @@
   const filter=button.dataset.filter;let count=0;
   filters.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   cards.forEach(card=>{card.hidden=filter!=='all'&&!card.dataset.categories.split(' ').includes(filter);if(!card.hidden)count++;});
-  document.querySelector('#project-count').textContent=`${count} projects`;
+  const projectCount=document.querySelector('#project-count');
+  if(projectCount)projectCount.textContent=`${count} projects`;
   document.querySelector('#filter-status').textContent=`Showing ${count} projects: ${button.childNodes[0].textContent.trim()}.`;
  }
  function restoreFilter(){
