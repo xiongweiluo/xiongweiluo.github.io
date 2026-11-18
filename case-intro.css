@@ -46,7 +46,7 @@
 /* One rhythm from introduction to opening media, then into the first chapter.
    Keep the internal layout of each cover and later chapter spacing intact. */
 .compact-case .case-shell > .case-introduction + :is(.case-hero, .r56),
-.compact-case .case-shell > .case-hero + :is(.edit50, .fg-editorial, .jd-editorial44) {
+.compact-case .case-shell > .case-hero + :is(.edit50, .fg-editorial, .jd-editorial44, .r56) {
   margin-top: var(--case-opening-space);
 }
 @media (min-width: 701px) and (max-width: 800px) {
