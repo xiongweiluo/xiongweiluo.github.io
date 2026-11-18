@@ -48,3 +48,12 @@
   .compact-case .case-shell > .case-hero { margin-top: 24px; }
   .compact-case .jd-development { margin: 32px 0; }
 }
+
+/* Separate the pavilion photo collage caption from the following photograph. */
+.compact-case .case-shell .day-collage52 {
+  padding: 0;
+  margin-bottom: var(--case-media-space);
+}
+.compact-case .case-shell .day-collage52 figcaption {
+  margin-top: 10px;
+}
