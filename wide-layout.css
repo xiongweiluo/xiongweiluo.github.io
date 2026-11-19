@@ -1,0 +1,78 @@
+/* Preserve the sidebar while giving covers enough space in narrow desktop windows. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .portfolio-projects .unified-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Interpolate from the notebook layout, then cap the reading and gallery widths. */
+@media (min-width: 1601px) {
+  :root {
+    --portfolio-width: clamp(1080px, calc(60vw + 120px), 1440px);
+    --case-width: clamp(820px, calc(40vw + 180px), 1060px);
+    --cover-width: clamp(720px, calc(50vw - 80px), 1020px);
+    --caption-size: clamp(12px, calc(0.32vw + 6.88px), 14px);
+    --nav-size: clamp(13px, calc(0.32vw + 7.88px), 15px);
+  }
+
+  .site-header,
+  .page-layout {
+    max-width: var(--portfolio-width);
+  }
+
+  .site-header::before {
+    inset-inline: calc((var(--portfolio-width) - 100vw) / 2);
+  }
+
+  :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .page-layout {
+    grid-template-columns: clamp(250px, calc(10vw + 90px), 310px) minmax(0, 1fr);
+    column-gap: clamp(48px, 3vw, 68px);
+  }
+
+  :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro {
+    max-width: none;
+  }
+
+  :is(.portfolio-projects, .portfolio-about, .portfolio-contact) .intro h1 {
+    font-size: clamp(26px, calc(1vw + 10px), 32px);
+    line-height: 1.23;
+  }
+
+  .site-header .top-page-nav,
+  .portfolio-projects .filter-button,
+  .portfolio-about .skill-group li {
+    font-size: var(--nav-size);
+  }
+
+  .portfolio-projects .unified-gallery .project-heading h3 {
+    font-size: clamp(14px, calc(0.32vw + 8.88px), 16px);
+  }
+
+  .portfolio-projects .unified-gallery :is(.project-description, .project-one-liner) {
+    font-size: var(--caption-size);
+  }
+
+  .portfolio-contact #main {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .compact-case .case-shell {
+    max-width: var(--case-width);
+  }
+
+  .compact-case .case-shell > .case-hero,
+  .compact-case .case-hero .motion-frame {
+    max-width: var(--cover-width);
+  }
+
+  /* These introductions already use a full-width diagram or panel. */
+  .compact-case .case-shell > .jd-hero64,
+  .compact-case .case-shell:has(.ed-interaction) > .case-hero {
+    max-width: none;
+  }
+
+  .compact-case #case-content p {
+    max-inline-size: 68ch;
+  }
+}
