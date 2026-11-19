@@ -26,3 +26,10 @@
  .portfolio-projects .project-filters { display: flex; flex-wrap: wrap; justify-content: flex-start; column-gap: 18px; row-gap: 0; }
  .portfolio-projects .filter-button { flex: 0 0 auto; white-space: nowrap; }
 }
+
+/* Keep the five filters in two readable rows on smaller phones. */
+@media (max-width: 360px) {
+ .portfolio-projects .project-filters { column-gap: 8px; }
+ .portfolio-projects .filter-button { font-size: 12px; font-weight: 400; }
+ .portfolio-projects .filter-button span { margin-left: 3px; }
+}
